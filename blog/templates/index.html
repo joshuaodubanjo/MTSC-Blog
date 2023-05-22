@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block title %}
+    <title> {{ block.super }} | Home` </title>
+{% endblock title %}
+
+    
+
+
+{% block header %}
+    {% include 'header.html' %}
+{% endblock header %}
+
+
+
+{% block content %}
+    <!-- Blog Content -->
+    <section class="max-w-screen sm:bg-tertiary-800">
+        <div class="w-full sm:w-5/6 min-h-screen mx-auto flex bg-tertiary-200">
+            <!-- left part -->
+            <div class="hidden lg:block">
+                <div class="left m-4 p-4 w-3/4 ">
+                    <h1 class="text-lg mb-4 text-center font-extrabold">Category</h1>
+                    <div class="grid justify-center">
+                        
+                        {% if category %}
+                            {% for cat in category %}
+                            <div class="flex ml-4 mb-2">
+                                <input id="cat-checkbox" type="checkbox" class="mr-1">
+                                <label for="cat-checkbox" class="text-md">{{ cat.title }}</label>
+                            </div>
+                            {% endfor %}
+                        {% endif %}
+
+                   </div>
+                </div>
+            </div>
+            <!-- right part -->
+            <div class="right mx-auto p-10 lg:p-4 flex flex-col lg:w-3/4">
+                <div class="flex justify-center">
+                    <h1 class="text-4xl font-extrabold tracking-wide">Welcome to Our Blog</h1>
+                </div>
+                <div class="lg:gap-x-28 gap-y-20 w-full flex flex-col lg:grid lg:grid-cols-2 pt-8 px-24">
+                    {% if all_post %}
+                        {% for post in all_post %}
+                        <a href="#" class="h-fit mx-auto transition duration-300 ease-in-out shadow-md shadow-secondary-100 hover:shadow-secondary-900 hover:shadow-lg ">
+                            <img src="{{ post.img }}" alt="" class="w-full h-64 object-cover mx-auto ">
+                            <div class="mx-auto my-2">
+                                <h2 class="border-b-4 border-secondary-900 text-center px-1 uppercase ">{{ post.title }}</h2>
+                                <p class="my-3 px-2 text-start text-sm text-slate-900 truncate">
+                                    {{ post.content}}
+                                </p>
+                                <p href="#" class="pt-2 px-4 text-end">
+                                    <span class="font-bold  border-b-2 border-primary-900 hover:text-tertiary-700 transition duration-300 ease-out">Read more...</span>
+                                </p>
+                            </div>
+                        </a>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+    </section>
+{% endblock content %}
+    
+
+
+
+{% block footer %}
+    {% include 'footer.html' %}
+{% endblock footer %}

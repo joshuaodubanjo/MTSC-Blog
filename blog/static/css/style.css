@@ -1,0 +1,36 @@
+.fancy-btn {
+    @apply py-2 px-2 font-medium text-primary-100 hover:rounded hover:bg-secondary-100 hover:text-white hover:transition duration-300 ease-in hover:ease-in;
+}load
+
+.head {
+    width: 7%;
+    margin-right: 5px;
+}
+
+.icon1{
+    filter: invert(34%) sepia(57%) saturate(652%) hue-rotate(182deg) brightness(98%) contrast(86%);
+}
+
+.icon2{
+    filter: invert(21%) sepia(100%) saturate(2581%) hue-rotate(318deg) brightness(90%) contrast(85%);
+}
+
+.icon3{
+    filter: invert(19%) sepia(87%) saturate(7286%) hue-rotate(358deg) brightness(99%) contrast(117%);
+}
+
+.icon4 {
+    filter: invert(57%) sepia(100%) saturate(3051%) hue-rotate(176deg) brightness(100%) contrast(91%);
+}
+
+.icon5 {
+    filter: invert(0%) sepia(82%) saturate(7500%) hue-rotate(151deg) brightness(87%) contrast(112%);
+}
+
+.icon6 {
+    filter: invert(39%) sepia(17%) saturate(2562%) hue-rotate(211deg) brightness(96%) contrast(91%);
+}
+
+.icon7 {
+    filter: invert(11%) sepia(68%) saturate(7492%) hue-rotate(245deg) brightness(57%) contrast(126%);
+}

@@ -1,0 +1,82 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    {% block blockname %}
+        <title>Christian Blog</title>
+    {% endblock blockname %}
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" href="{% static '/img/logo.png' %}">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        tertiary: {
+                            100: '#e8edf1',
+                            200: '#c9d6de',
+                            300: '#a6bcc9',
+                            400: '#8ca8b9',
+                            500: '#688ea4',
+                            600: '#537589',
+                            700: '#405b6a',
+                            800: '#2e414c',
+                            900: '#1b272d',
+                            },
+                        primary: {
+                            100: '#d6e6fb',
+                            200: '#a9ccf6',
+                            300: '#7cb2f2',
+                            400: '#5097ee',
+                            500: '#237de9',
+                            600: '#1365c8',
+                            700: '#0f4f9c',
+                            800: '#0a386f',
+                            900: '#062142',
+                            },
+                        secondary: {
+                            100: '#8a82ab',
+                            200: '#857da8',
+                            300: '#8178a5',
+                            400: '#7c73a1',
+                            500: '#786e9e',
+                            600: '#73699b',
+                            700: '#6f6597',
+                            800: '#6b6192',
+                            900: '#685e8d',
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+<body>
+    
+    
+    {% block header %}
+        
+    {% endblock header %}
+        
+    
+    {% block content %}
+        
+    {% endblock content %}
+        
+    
+    {% block footer %}
+        
+    {% endblock footer %}
+        
+
+</body>
+</html>
